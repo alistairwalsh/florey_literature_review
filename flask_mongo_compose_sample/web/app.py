@@ -10,7 +10,7 @@ mongo = PyMongo(app)
 @app.route('/info')
 def info():
 	user = mongo.db.users.find_one_or_404({'_id': username})
-    return user
+	return user
 
 @app.route('/javascript')
 def javascript():
