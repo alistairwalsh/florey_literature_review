@@ -11,7 +11,7 @@ mongo = PyMongo(app)
 def info():
 	username = "Alistair"
 	#user = mongo.db.users.find_one_or_404({'_id': username})
-	return mongo.config['MONGO_ARCHIVE_COLLECTION']
+	return mongo.dbname
 
 @app.route('/javascript')
 def javascript():
