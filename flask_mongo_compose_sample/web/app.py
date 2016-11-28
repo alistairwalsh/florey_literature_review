@@ -26,7 +26,7 @@ def add_article():
   article = mongo.db.articles
   name = request.json['name']
   author = request.json['author']
-  article_id = article.insert({'name': name, 'author': distance})
+  article_id = article.insert({'name': name, 'author': author})
   new_article = article.find_one({'_id': author_id })
   output = {'name' : new_article['name'], 'author' : new_article['author']}
   return jsonify({'result' : output})
