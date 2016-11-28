@@ -4,6 +4,11 @@ from flask_pymongo import PyMongo
 
 app = Flask(__name__)
 
+client = MongoClient(
+    os.environ['DB_PORT_27017_TCP_ADDR'],
+    27017)
+db = client.articles
+
 mongo = PyMongo(app)
 
 @app.route('/info')
