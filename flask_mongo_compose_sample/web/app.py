@@ -9,7 +9,7 @@ mongo = PyMongo(app)
 
 @app.route('/info')
 def info():
-	return app.__name__
+	return mongo.items()
 
 @app.route('/javascript')
 def javascript():
