@@ -16,11 +16,7 @@ def index():
 def signin():
 	return render_template('showSignUp.html')
 
-@app.route('db_post')
-def db_post():
-	mongo.collection
-
-@app.route('add_article', methods=['POST'])
+@app.route('/add_article', methods=['POST'])
 def add_article():
   article = mongo.db.articles
   name = request.json['name']
