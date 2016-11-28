@@ -11,7 +11,7 @@ mongo = PyMongo(app)
 def info():
 	username = "Alistair"
 	#user = mongo.db.users.find_one_or_404({'_id': username})
-	return mongo.MONGO_DBNAME
+	return username
 
 @app.route('/javascript')
 def javascript():
