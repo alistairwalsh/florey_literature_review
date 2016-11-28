@@ -12,7 +12,7 @@ def javascript():
 def index():
     return render_template('index.html')
 
-@app.route('/showSignUp')
+@app.route('/SignUp')
 def signin():
 	return render_template('showSignUp.html')
 
